@@ -1,4 +1,4 @@
-FROM debian:bookworm-slim
+FROM ubuntu:22.04
 
 # Environment variables
 ENV ANDROID_SDK_ROOT=/opt/android-sdk
