@@ -50,4 +50,8 @@ RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | b
 SHELL ["/bin/bash", "-c"]
 
 # Final confirmation
-RUN java -version && node -v && npm -v && firebase --version && gcloud --version && sdkmanager --list
+RUN java -version && \
+    . "$NVM_DIR/nvm.sh" && \
+    node -v && npm -v && firebase --version && \
+    gcloud --version && \
+    sdkmanager --list
