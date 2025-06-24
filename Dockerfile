@@ -39,6 +39,8 @@ RUN wget --quiet -O /tmp/google-cloud-sdk.tar.gz https://dl.google.com/dl/clouds
     /opt/google-cloud-sdk/install.sh --quiet && \
     echo "source /opt/google-cloud-sdk/path.bash.inc" >> ~/.bashrc
 
+ENV PATH="/opt/google-cloud-sdk/bin:${PATH}"
+
 # Install Firebase CLI using NVM and Node.js
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash && \
     . "$NVM_DIR/nvm.sh" && \
